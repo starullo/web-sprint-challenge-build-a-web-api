@@ -43,12 +43,9 @@ const validateProjectId = (req, res, next) => {
 }
 
 const validateNewAction = (req, res, next) => {
-    if (!req.body.description || !req.body.notes || !req.body.project_id) {
-        next({code: 404, message: 'Description, Notes, and Project ID are required fields'})
-    }  else if (req.body.project_id != req.projectId) {
-        console.log(req.body.project_id, req.projectId)
-        next({code: 404, message: 'The project id in the request must be the same as the one you entered in the url'})
-    }
+    if (!req.body.description || !req.body.notes) {
+        next({code: 404, message: 'Description and Notes are required fields'})
+    }  
     else {
         next();
     }
@@ -77,7 +74,7 @@ router.get('/:projectId/actions', validateProjectId, (req, res)=>{
 router.post('/:projectId/actions', [validateProjectId, validateNewAction], (req, res)=>{
     try {
         console.log(req.body)
-        Action.insert(req.body)
+        Action.insert({...req.body, project_id: req.params.projectId})
         .then(data=>{
             res.status(201).json(data);
         })
