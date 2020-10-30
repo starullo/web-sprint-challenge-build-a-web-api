@@ -15,7 +15,7 @@ server.get('/', (req, res)=>{
     res.send(`LET'S DO THIS THANGGG YAY`);
 });
 
-server.get('/actions', (req, res)=>{
+server.get('/api/actions', (req, res)=>{
     Actions.get()
     .then(data=>{
         res.status(200).json(data)
