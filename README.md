@@ -89,6 +89,10 @@ Express routers allow you to perform different actions based on different urls/e
 1. Describe tooling used to manually test the correctness of an API.
 There's a lot of tools out there to test your api, but I like to use postman and http pie. It allows you to communicate with your server and make different requests
 
+
+*for stretch*
+HEROKU URL https://websprintchallengeapi.herokuapp.com/
+
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
 ## Instructions
