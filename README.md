@@ -61,10 +61,37 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. The core features of Node.js and Express and why they are useful.
+Node. js is an open source, cross-platform runtime environment for developing server-side and networking applications. Node js is very fast (it uses google chromes v8 javascript engine) and makes it possible to run javascript code in different enviornments besides the browser. Express is a popular framework used for developing node.js applications. It allows you to easily set up servers, routes, and middleware.
+
 1. Understand and explain the use of Middleware?
+
+Middleware is code that can 'interrupt' our program and perform various actions (like authentication). Middleware improves the overall functionality of our code and can help keep it dry. I like to think of middleware as just a callback function. We can create custom middleware in node.js/express, in order to catch the request and make sure it has the proper information in the body/url. There's all kinds of middleware though, like that Morgan thing that logs out the request information.
+
 1. The basic principles of the REST architectural style.
+REST stands for Representational State Transfer. It is an architecture style for designing loosely coupled applications over HTTP, that is often used in the development of web services. It does not enforce any rule regarding how it should be implemented at lower level, it just put high level design guidelines and leave you to think of your own implementation.
+REST defines 6 architetural restraints which make a true restful api-
+
+UNIFORM INTERFACE
+
+CLIENT-SERVER (the client application and server application must be able to evolve separately without any dependency on each other)
+
+STATELESS (make all client-server interactions stateless)
+
+CACHEABLE
+
+LAYERED SYSTEM
+
+CODE ON DEMAND (*optional* Most of the time you will be sending back data in the form of xml/json- but when you need to, you're able to send back executable code)
+
 1. Understand and explain the use of Express Routers.
+Express routers allow you to perform different actions based on different urls/endpoints. It's kinda similar to react router, you can say 'when someone makes a get request to this endpoint, this is what will happen'. 
+
 1. Describe tooling used to manually test the correctness of an API.
+There's a lot of tools out there to test your api, but I like to use postman and http pie. It allows you to communicate with your server and make different requests
+
+
+*for stretch*
+HEROKU URL https://websprintchallengeapi.herokuapp.com/
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
